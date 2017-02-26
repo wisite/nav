@@ -1,0 +1,79 @@
+@color: #e84c3d;
+@top: 15px;
+.neo-nav {
+	height: 60px;
+	border: 1px solid #eee;
+	display: flex;
+	//margin-top: @top;
+	.neo-nav-body {
+		flex-basis: 60%;
+		display: flex;
+		justify-content: center;
+		float: right;
+		.neo-nav-item {
+			display: inline-block;
+			height: 58px;
+			line-height: 58px;
+			border-top: 2px solid white;
+			border-bottom: 2px solid white;
+			position: relative;
+			transition: 500ms;
+			overflow: hidden;
+			&:after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 5px solid @color;
+				position: absolute;
+				bottom: 0;
+				left: calc(50% - 4px);
+				opacity: 0;
+				transition: 500ms;
+			}
+			&:hover {
+				border-color: @color;
+				&:after {
+					opacity: 1;
+				}
+				a {
+					color: @color;
+				}
+			}
+			a {
+				padding: 2em 1em;
+				color: #999;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.neo-nav-logo-wrapper {
+		flex-basis: 40%;
+		display: flex;
+		justify-content: center;
+		.neo-nav-logo {
+			height: calc(~"100% + @top + 2px");
+			width: 100px;
+			margin-top: -1 * @top - 1px;
+			background: @color;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			color: #fde8e2;
+			h1 {
+				text-align: center;
+				font-size: 1.3em;
+				font-style: italic;
+				font-weight: bold;
+			}
+			span {
+				text-align: center;
+				font-size: 8px;
+			}
+		}
+	}
+}
