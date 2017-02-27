@@ -24,10 +24,10 @@ if (!isDev) {
 
 module.exports = {
   entry: {
-    nav: './src',
+    index: './src',
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "lib"),
     filename: `[name].js`,
   },
   module: {
