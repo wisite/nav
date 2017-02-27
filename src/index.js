@@ -1,4 +1,3 @@
-import './index.less';
 import NavItem from './NavItem';
 
 class Nav extends React.Component {
