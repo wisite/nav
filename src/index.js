@@ -13,7 +13,7 @@ class Nav extends React.Component {
   renderItems() {
     const { items } = this.props;
     return items.map((item) => (
-      <NavItem {...item} />
+      <NavItem key={item.name} {...item} />
     ));
   }
 
