@@ -1,6 +1,7 @@
 /**
  * Created by ssehacker on 2017/2/25.
  */
+import React from 'react';
 
 class NavItem extends React.Component {
   render() {
