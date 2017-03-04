@@ -73,8 +73,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', 'jsx', 'less'],
   },
-  externals: {
-    react: 'let React',
-    'react-dom': 'let ReactDOM',
-  },
+  // externals: {
+    // react: 'let React',
+    // 'react-dom': 'let ReactDOM',
+  // },
 };
